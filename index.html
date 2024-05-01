@@ -7,28 +7,31 @@
     <title>Weather Me</title>
   </head>
   <body
-    class=" bg-center bg-cover bg-no-repeat min-h-screen w-full flex flex-col gap-5 items-center justify-start p-10"
+    class="bg-center bg-cover bg-no-repeat min-h-screen w-full flex flex-col gap-5 items-center justify-start p-10"
   >
+    <div class="w-fit flex items-center">
+      <h1 class="text-white font-bold text-2xl">Weather Me</h1>
+      <img src="./image/116.png.png" alt="" class="w-14 h-14" srcset="" />
+    </div>
 
-     <div class="w-fit flex items-center">
-        <h1 class="text-white font-bold text-2xl">Weather Me</h1>
-        <img src="./image/116.png.png" alt="" class="w-14 h-14" srcset="" />
-     </div>
-
-     <form
-        action=""
-        method="get"
-        id="form"
-        class="flex w-4/5 md:w-3/5 lg:w-[35%] items-center justify-center gap-2"
-     >
-     <label for="dropdown" >  Choose options   </label>
+    <form
+      action=""
+      method="get"
+      id="form"
+      class="flex w-4/5 md:w-3/5 lg:w-[35%] items-center justify-center gap-2"
+    >
+      <label class="text-white text-xl" for="dropdown"> Choose options </label>
       <select id="dropdown" onchange="getValue()">
-         <option value="1">Karachi</option>
-         <option value="2">Islamabad</option>
-         <option value="3">Lahore</option>
+        <option value="1">Karachi</option>
+        <option value="2">Islamabad</option>
+        <option value="3">Lahore</option>
+        <option value="4">Washignton</option>
+        <option value="5">Multan</option>
+        <option value="6">Toronto</option>
+        <option value="7">Peshawar</option>
       </select>
 
-        <!-- <input
+      <!-- <input
           type="text"
           name="city"
           id="town"
@@ -36,52 +39,68 @@
           required
           class="py-2 px-3 w-full rounded-full bg-white text-white text-lg outline outline-2 backdrop-blur-lg ease-in-out duration-300 outline-white/70 focus:bg-white/20"
         /> -->
-        <!-- <button type="submit" class="">
+      <!-- <button type="submit" class="">
             <ion-icon
                class="text-white font-black text-2xl p-3 bg-white/50 rounded-full"
                name="search"
               ></ion-icon> 
         </button>   -->
-    </form> 
+    </form>
 
     <!-- Home city card-->
     <div
-       class="p-5 w-4/5 justify-between flex rounded-3x1 shadow-2x1 cursor-pointer transform ease-in-out bg-white/20 duration-500 backdrop-blur-sm md:w-3/5 lg:w-[35%] hover:scale-[105%]"
+      class="p-5 w-4/5 justify-between flex rounded-3x1 shadow-2x1 cursor-pointer transform ease-in-out bg-white/20 duration-500 backdrop-blur-sm md:w-3/5 lg:w-[35%] hover:scale-[105%]"
     >
-       <div id="left" class="flex flex-col">
+      <div id="left" class="flex flex-col">
         <div id="top" class="mb-6">
-            <p id="temperature-main " class="font-bold text-5x1 text-white">24°C</p>
-            <p class="font-semibold text-md text-white">Now</p>
+          <p id="temperature-main" class="font-bold text-5x1 text-white">
+            24°C
+          </p>
+          <p class="font-semibold text-md text-white">Now</p>
         </div>
-        <p class="font-semibold text-x1 text-white"><samp id="city">London</samp>, <samp id="country">UK</samp>
-       </p>
-       </div>
-       <div id="right" class="flex justify-end items-center">
+        <p class="font-semibold text-x1 text-white">
+          <samp id="city">London</samp>, <samp id="country">UK</samp>
+        </p>
+      </div>
+      <div id="right" class="flex flex-col items-center">
         <img class="w-28 h-4w-28" src="./image/113.png.png" alt="" />
-       </div>
+        <p id="sunrise-main" class="font-bold text-5x1 text-black">
+          24°C
+        </p>    <br>
+              <p id="sunset-main" class="font-bold text-5x1 text-black">
+          24°C
+        </p>
+      </div>
     </div>
-    
+
     <!-- Weather Details -->
     <!-- left -->
     <div
-       class="flex w-full justify-between bg-[#0198afb6] p-3 backdrop-blur-2x1 ease-in-out duration-500 rounded-x1 md:w-3/5 lg:w-[35%]"
+      class="flex w-full justify-between bg-[#0198afb6] p-3 backdrop-blur-2x1 ease-in-out duration-500 rounded-x1 md:w-3/5 lg:w-[35%]"
     >
-       <div id="left" class="flex flex-col justify-start">
+      <div id="left" class="flex flex-col justify-start">
         <!-- Icon -->
         <img id="icon" src="./image/116.png.png" alt="weather icon" />
         <!-- Weather -->
         <p id="weather" class="font-bold text-4x1 text-white">Sunny</p>
         <!-- Description -->
-        <p id="weather-description" class="font-semibold text-white">clear sky</p>
-       </div>
-       <div id="right" class="w-1/2 flex-col space-y-2">
+        <p id="weather-description" class="font-semibold text-white">
+          clear sky
+        </p>
+      </div>
+      <div id="right" class="w-1/2 flex-col space-y-2">
         <!-- Temperature -->
         <div
           class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6"
         >
           <ion-icon class="w-8 h-8 text-white" name="thermometer"></ion-icon>
           <div class="">
-            <p id="temperature" class="font-bold text-2xl text-right text-[#ff5a00]">26.08 °C</p>
+            <p
+              id="temperature"
+              class="font-bold text-2xl text-right text-[#ff5a00]"
+            >
+              26.08 °C
+            </p>
             <p class="text-sm text-white text-right">Temperature</p>
           </div>
         </div>
@@ -91,7 +110,12 @@
         >
           <ion-icon class="w-8 h-8 text-white" name="speedometer"></ion-icon>
           <div class="">
-            <p id="wind-speed" class="font-bold text-2xl text-[#ff5a00] text-right">1.18 m/s</p>
+            <p
+              id="wind-speed"
+              class="font-bold text-2xl text-[#ff5a00] text-right"
+            >
+              1.18 m/s
+            </p>
             <p class="text-sm text-white text-right">Wind</p>
           </div>
         </div>
@@ -101,10 +125,18 @@
         >
           <ion-icon class="w-8 h-8 text-white" name="rainy"></ion-icon>
           <div class="">
-            <p id="humidity" class="font-bold text-2xl text-[#ff5a00] text-right">89 %</p>
+            <p
+              id="humidity"
+              class="font-bold text-2xl text-[#ff5a00] text-right"
+            >
+              89 %
+            </p>
             <p class="text-sm text-white text-right">Humidity</p>
           </div>
-        </div>
+          
+        
+        <!-- Sunset -->
+       
       </div>
     </div>
     <script src="script.js"></script>
@@ -131,17 +163,4 @@
 Current Weather Data: https://openweathermap.org/current
 Weather Icons: https://openweathermap.org/weather-conditions
 Download Icons: https://cdn.weatherapi.com/weather.zip
- -->
-
-       
-
-  
-
-
-  
-    
-  
-
-    
-
-   
+ -->
