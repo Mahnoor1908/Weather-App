@@ -25,6 +25,7 @@
     --tw-content: '';
 }
 
+
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -65,8 +66,35 @@ body {
     background-image: url(./image/bg_image.jpg.jpg);
     background-position: center;
     background-size: cover;
+}
 
-} 
+    /* Style the label */
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style the dropdown */
+#dropdown {
+  width: 200px; /* Adjust the width as needed */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the dropdown options */
+#dropdown option {
+  padding: 8px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style when an option is hovered */
+#dropdown option:hover {
+  background-color: #f0f0f0;
+}
+
 
 /*
 1. Add the correct height in Firefox.

@@ -21,8 +21,8 @@
         id="form"
         class="flex w-4/5 md:w-3/5 lg:w-[35%] items-center justify-center gap-2"
      >
-     <label for="dropdown">  Choose options   </label>
-      <select id="dropdown">
+     <label for="dropdown" >  Choose options   </label>
+      <select id="dropdown" onchange="getValue()">
          <option value="1">Karachi</option>
          <option value="2">Islamabad</option>
          <option value="3">Lahore</option>
@@ -31,7 +31,7 @@
         <!-- <input
           type="text"
           name="city"
-          id="city"
+          id="town"
           placeholder="Enter a city..."
           required
           class="py-2 px-3 w-full rounded-full bg-white text-white text-lg outline outline-2 backdrop-blur-lg ease-in-out duration-300 outline-white/70 focus:bg-white/20"
@@ -108,6 +108,14 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <!-- <script type="text/javascript">
+      function getValue(){
+    const selectElement=document.querySelector('#dropdown');
+    let output = selectElement.value;
+    console.log("values ",output)
+}
+
+    </script> -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
